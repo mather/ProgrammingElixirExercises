@@ -41,4 +41,11 @@ defmodule Chapter5Test do
     assert fizzbuzz_n.(10) == "Buzz"
     assert fizzbuzz_n.(13) == 13
   end
+
+  test "Functions - 4" do
+    prefix = fn str -> fn name -> str <> " " <> name end end
+    mrs = prefix.("Mrs")
+    assert mrs.("Smith") == "Mrs Smith"
+    assert prefix.("Elixir").("Rocks") == "Elixir Rocks"
+  end
 end
