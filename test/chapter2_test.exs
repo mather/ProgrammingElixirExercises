@@ -18,4 +18,11 @@ defmodule Chapter2Test do
 
     assert_raise MatchError, fn -> [[a]] = [[1,2,3]] end
   end
+
+  test "PatternMatching - 2" do
+    assert_raise MatchError, fn -> [a, b, a] = [1, 2, 3] end
+    assert_raise MatchError, fn -> [a, b, a] = [1, 1, 2] end
+    [a, b, a] = [1, 2, 1]
+    assert {a, b} == {1, 2}
+  end
 end
