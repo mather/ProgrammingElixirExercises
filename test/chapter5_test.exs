@@ -48,4 +48,13 @@ defmodule Chapter5Test do
     assert mrs.("Smith") == "Mrs Smith"
     assert prefix.("Elixir").("Rocks") == "Elixir Rocks"
   end
+
+  test "Functions - 5" do
+    list1 = Enum.map [1,2,3,4], &(&1 + 2)
+    assert list1 == [3,4,5,6]
+
+    # Enum.each [1,2,3,4], &(IO.inspect &1)
+    list2 = Enum.map [1,2,3,4], &(to_string &1)
+    assert list2 == ["1", "2", "3", "4"]
+  end
 end
