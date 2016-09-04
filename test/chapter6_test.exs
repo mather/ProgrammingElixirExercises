@@ -16,4 +16,7 @@ defmodule Chapter6Test do
     assert Times.quadruple(4) == 16
   end
 
+  test "ModulesAndFunctions - 4" do
+    assert Chapter6.sum(10) == 55
+  end
 end
