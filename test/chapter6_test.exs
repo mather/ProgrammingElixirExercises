@@ -24,4 +24,17 @@ defmodule Chapter6Test do
     assert Chapter6.gcd(17, 23) == 1
     assert Chapter6.gcd(91, 26) == 13
   end
+
+  test "ModulesAndFucntions - 6" do
+    assert Chapter6.guess(273, 1..1000) == """
+      Is it 500
+      Is it 250
+      Is it 375
+      Is it 312
+      Is it 281
+      Is it 265
+      Is it 273
+      273
+      """
+  end
 end

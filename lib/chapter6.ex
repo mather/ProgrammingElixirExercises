@@ -8,4 +8,21 @@ defmodule Chapter6 do
   def gcd(x, 0), do: x
   def gcd(x, y), do: gcd(y, rem(x,y))
 
+  # ModulesAndFucntions - 6
+  def guess(actual, first..last), do: _guess(actual, first..last, first + div(last - first, 2))
+
+  defp _guess(actual, first..last, actual) do
+    """
+    Is it #{actual}
+    #{actual}
+    """
+  end
+
+  defp _guess(actual, first..last, target) when actual < target do
+    "Is it #{target}\n" <> guess(actual, first..target)
+  end
+
+  defp _guess(actual, first..last, target) do
+    "Is it #{target}\n" <> guess(actual, target..last)
+  end
 end
