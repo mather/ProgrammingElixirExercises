@@ -19,4 +19,9 @@ defmodule Chapter6Test do
   test "ModulesAndFunctions - 4" do
     assert Chapter6.sum(10) == 55
   end
+
+  test "ModulesAndFunctions - 5" do
+    assert Chapter6.gcd(17, 23) == 1
+    assert Chapter6.gcd(91, 26) == 13
+  end
 end
